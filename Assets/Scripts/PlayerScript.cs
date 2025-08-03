@@ -5,7 +5,7 @@ using TMPro;
 public class PlayerScript : MonoBehaviour
 {
     public float JumpForce;
-
+    
     float score;
 
     [SerializeField]
@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour
     Rigidbody2D RB;
 
     public TMP_Text ScoreText;
+    public GameOverUI gameOverUI;
 
     private void Awake()
     {
@@ -51,8 +52,12 @@ public class PlayerScript : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            isAlive = false;
-            Time.timeScale = 0;
+            if (isAlive)
+            {
+                isAlive = false;
+                gameOverUI.GameOver();
+                Time.timeScale = 0;
+            }
         }      
     }
 }

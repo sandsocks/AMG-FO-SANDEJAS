@@ -31,7 +31,6 @@ public class PlayerScript : MonoBehaviour
                 RB.AddForce(Vector2.up * JumpForce);
                 isGrounded = false;
             }
-
         }
 
         if (isAlive)

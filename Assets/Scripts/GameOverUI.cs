@@ -8,11 +8,11 @@ public class GameOverUI : MonoBehaviour
 
     public void GameOver()
     {
-        gameOverPanel.SetActive(true);
+        SceneManager.LoadSceneAsync(1);
     }
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadSceneAsync(0);
     }
 }

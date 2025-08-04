@@ -1073,7 +1073,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1984416722}
-  - {fileID: 1326355418}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1093,7 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beeeb54f663dbb5479f7075f55f54d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverPanel: {fileID: 1326355417}
+  gameOverPanel: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3528,16 +3527,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1326355417 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5377195300889226728, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-  m_PrefabInstance: {fileID: 2500745230368011979}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1326355418 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-  m_PrefabInstance: {fileID: 2500745230368011979}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1361620705
 GameObject:
   m_ObjectHideFlags: 0
@@ -3889,7 +3878,7 @@ GameObject:
   - component: {fileID: 1908447405}
   - component: {fileID: 1908447407}
   m_Layer: 0
-  m_Name: TestPlayer
+  m_Name: CatPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3996,7 +3985,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -4042,7 +4031,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0033140182, y: 0.0016570538}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4052,7 +4041,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2916338, y: 0.8376131}
   m_EdgeRadius: 0
 --- !u!95 &1908447407
 Animator:
@@ -4257,113 +4246,12 @@ Transform:
   m_GameObject: {fileID: 5183443419338532134}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.53, y: -2.7, z: 0}
-  m_LocalScale: {x: 0.89829165, y: 0.9378649, z: 0.52624}
+  m_LocalPosition: {x: 21.53, y: -1.79, z: 0}
+  m_LocalScale: {x: 2.31, y: 2.31, z: 2.31}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2500745230368011979
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 132425461}
-    m_Modifications:
-    - target: {fileID: 4288630283605947321, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 132425462}
-    - target: {fileID: 5377195300889226728, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_Name
-      value: GameOver
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1191.3884
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 670.156
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405711332311909786, guid: 05116865915143c4f8d67536512ac6da, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 05116865915143c4f8d67536512ac6da, type: 3}
 --- !u!212 &3885588574824544341
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4430,8 +4318,9 @@ GameObject:
   - component: {fileID: 128372842922494150}
   - component: {fileID: 3885588574824544341}
   - component: {fileID: 5183443419338532135}
+  - component: {fileID: 5183443419338532136}
   m_Layer: 0
-  m_Name: TestEnemyGenerator
+  m_Name: EnemyGenerator
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4454,6 +4343,28 @@ MonoBehaviour:
   CurrentSpeed: 12
   MaximumSpeed: 0
   SpeedMultiplier: 0.0015
+--- !u!95 &5183443419338532136
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5183443419338532134}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 277ccffd2caed564db9a42c8e27308f4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

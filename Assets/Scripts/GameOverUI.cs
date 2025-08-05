@@ -10,9 +10,4 @@ public class GameOverUI : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(1);
     }
-
-    public void Restart()
-    {
-        SceneManager.LoadSceneAsync(0);
-    }
 }

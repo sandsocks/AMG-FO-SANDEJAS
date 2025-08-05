@@ -9,7 +9,7 @@ public class EnemyGenerator : MonoBehaviour
     public float MaximumSpeed;
 
     public float SpeedMultiplier;
-    void Awake()
+    void Start()
     {
         CurrentSpeed = MinumumSpeed;
         GenerateEnemy();

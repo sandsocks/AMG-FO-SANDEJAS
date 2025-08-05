@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -17,13 +18,30 @@ public class PlayerScript : MonoBehaviour
     public TMP_Text ScoreText;
     public GameOverUI gameOverUI;
 
-    private void Awake()
+    RaycastHit hit;
+    int layerMask = 1 << 9;
+    private void Start()
     {
         RB = GetComponent<Rigidbody2D>();
         score = 0;
+        Time.timeScale = 1;
     }
     void Update()
     {
+        //Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - (GetComponent<Collider2D>().bounds.extents.y));
+        //RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, groundCheckDistance, groundLayer);
+
+        if (Physics.Raycast(transform.position,Vector2.down, out hit,Mathf.Infinity, layerMask))
+        {
+            Debug.DrawRay(transform.position, Vector3.down * hit.distance, Color.yellow);
+            Debug.Log("Not Grounded");
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, Vector3.down * hit.distance, Color.red);
+            Debug.Log("Grounded");
+        }    
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isGrounded == true)
@@ -31,6 +49,7 @@ public class PlayerScript : MonoBehaviour
                 RB.AddForce(Vector2.up * JumpForce);
                 isGrounded = false;
             }
+
         }
 
         if (isAlive)
@@ -56,6 +75,7 @@ public class PlayerScript : MonoBehaviour
                 isAlive = false;
                 gameOverUI.GameOver();
                 Time.timeScale = 0;
+                Debug.Log("Not Alive");
             }
         }      
     }

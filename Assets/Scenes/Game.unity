@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 55959404}
   - component: {fileID: 55959403}
   - component: {fileID: 55959402}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -3640,8 +3640,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -529.3238, y: 412.60205}
-  m_SizeDelta: {x: 714.8917, y: 36.7959}
+  m_AnchoredPosition: {x: -511.83286, y: 412.60205}
+  m_SizeDelta: {x: 749.8737, y: 36.7959}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1421225114
 MonoBehaviour:
@@ -3738,7 +3738,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00000
+  m_text: 000.00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b6a9727a7e53b21479b653750e5c8a94, type: 2}
   m_sharedMaterial: {fileID: 2391181305463414128, guid: b6a9727a7e53b21479b653750e5c8a94, type: 2}
